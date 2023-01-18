@@ -1,0 +1,25 @@
+capital = 64 #Berlin
+
+oob = "GPR_1930"
+
+#Starting tech
+set_technology = {
+	
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 12
+	fascism = 3
+	communism = 81
+	neutrality = 4
+}
+
+recruit_character = GPR_ernst_thalmann
+recruit_character = GPR_german_provisional_government

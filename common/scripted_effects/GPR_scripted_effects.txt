@@ -1,0 +1,64 @@
+# Expanding development of berlin
+
+GPR_initial_development_effect = {
+	custom_effect_tooltip = GPR_expand_development_tt
+	hidden_effect = {
+		event_target:GPR_development_target = { 
+			add_dynamic_modifier = { modifier = berlin_development }
+		}
+	}
+}
+
+GPR_expand_development_effect = {
+	custom_effect_tooltip = GPR_expand_development_tt
+	hidden_effect = {
+		event_target:GPR_development_target = { 
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = berlin_development }
+				}
+				remove_dynamic_modifier = { modifier = berlin_development }
+				add_dynamic_modifier = { modifier = expanded_development }
+			}
+		}
+	}
+}
+
+GPR_finishing_development_effect = {
+	custom_effect_tooltip = GPR_expand_development_tt
+	hidden_effect = {
+		event_target:GPR_development_target = { 
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = expanded_development }
+				}
+				remove_dynamic_modifier = { modifier = expanded_development }
+				add_dynamic_modifier = { modifier = near_completed_development }
+			}
+		}
+	}
+}
+
+GPR_completed_development_effect = {
+	custom_effect_tooltip = GPR_expand_development_tt
+	hidden_effect = {
+		event_target:GPR_development_target = { 
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = near_completed_development }
+				}
+				remove_dynamic_modifier = { modifier = near_completed_development }
+				add_dynamic_modifier = { modifier = completed_development }
+			}
+		}
+	}
+}
+
+GPR_rail_development_effect = {
+	custom_effect_tooltip = GPR_expand_rail_tt
+	hidden_effect = {
+		event_target:GPR_development_target = { 
+			add_dynamic_modifier = { modifier = expand_rail }
+		}
+	}
+}

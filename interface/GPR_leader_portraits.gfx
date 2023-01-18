@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_portrait_GPR_ernst_thalmann"
+		texturefile = "gfx/leaders/GPR/Portrait_Ernst_Thalmann.dds"
+	}
+
+}

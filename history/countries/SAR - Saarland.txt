@@ -1,0 +1,8 @@
+capital = 762 #Saarbrucken
+
+oob = "SAR_1930"
+
+#Starting tech
+set_technology = {
+	
+}

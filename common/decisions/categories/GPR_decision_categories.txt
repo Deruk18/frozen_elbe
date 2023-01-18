@@ -1,0 +1,29 @@
+#Country wide industrial expansion
+
+GPR_invest_in_state = {
+	priority = 200
+
+	icon = ger_mefo_bills
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+			has_completed_focus = GPR_invest_in_state
+	}
+}
+
+GPR_invest_in_rail = {
+	priority = 199
+
+	icon = ger_mefo_bills
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+			has_completed_focus = GPR_invest_in_rail
+	}
+}

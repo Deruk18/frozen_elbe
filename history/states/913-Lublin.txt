@@ -1,0 +1,28 @@
+
+state={
+	id=913
+	name="STATE_913"
+
+	history={
+		victory_points = {
+			11399 5 
+		}
+		owner = SOV
+		add_core_of = POL
+		add_core_of = UKR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		6580 9452 11399 
+	}
+	manpower=765341
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,41 @@
+  ####    ####   #    #  #    #  #####  #####   #   #      #       ######    ##    #####   ######  #####    ####  
+ #    #  #    #  #    #  ##   #    #    #    #   # #       #       #        #  #   #    #  #       #    #  #      
+ #       #    #  #    #  # #  #    #    #    #    #        #       #####   #    #  #    #  #####   #    #   ####  
+ #       #    #  #    #  #  # #    #    #####     #        #       #       ######  #    #  #       #####        # 
+ #    #  #    #  #    #  #   ##    #    #   #     #        #       #       #    #  #    #  #       #   #   #    # 
+  ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
+
+#He fucking dies lmao
+  characters = {
+  
+    GPR_ernst_thalmann = {
+        name = GPR_ernst_thalmann
+        portraits = {
+            civilian = {
+                large = GFX_portrait_GPR_ernst_thalmann
+            }
+        }
+        country_leader = {
+            ideology = stalinism
+            desc = { GPR_ernst_thalmann_desc }            
+            traits = { hero_of_german_socialism }
+            expire = "1953.3.1.1"
+            id = -1
+        }
+    }
+    GPR_german_provisional_government = { 
+        name = GPR_german_provisional_government
+
+        portraits = {
+            civilian = {
+                large = GFX_portrait_SOV_supreme_soviet
+            }
+        }
+        country_leader = {
+            ideology = stalinism
+            traits = { chaotic_council }
+            expire = "1953.3.1.1"
+            id = -1
+        }
+    }
+}

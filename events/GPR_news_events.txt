@@ -1,0 +1,40 @@
+#World news...
+
+add_namespace = GPR_news
+
+news_event = {
+	id = GPR_news.1
+	title = GPR_news.1.t
+	desc = GPR_news.1.d
+	picture = GFX_news_event_001
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = GPR_news.1.a
+		trigger = {
+		is_in_faction_with = GPR
+			NOT = {
+				TAG = GPR
+			}
+		}
+	}
+
+	option = {
+		name = GPR_news.1.b
+		trigger = {
+			TAG = GPR
+		}
+	}
+
+	option = {
+		name = GPR_news.1.c
+		trigger = {
+			NOT = {
+				TAG = GPR
+			}
+		}
+	}
+}

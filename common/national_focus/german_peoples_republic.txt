@@ -1,0 +1,768 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+
+	id = gpr_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GPR
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 60 y = 1400 }
+
+#The economy begins
+
+ focus = {
+		id = GPR_look_at_economy
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_look_at_economy_tt
+			country_event = GPR_economy.1
+			add_tech_bonus = {
+				name = GPR_construction_research
+				bonus = 1.5
+				uses = 1
+				category = construction_tech
+			}
+			}
+		}
+
+#Civilian Infrastructure
+
+ focus = {
+		id = GPR_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 6
+		y = 2
+		cost = 5
+		prerequisite = { focus = GPR_look_at_economy }
+		prerequisite = { focus = GPR_expand_berlin focus = GPR_rebuild_the_country }
+		#allow_branch = { has_country_flag = civilian_economy_focus }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		64 = {
+			 if = {
+        	limit = { is_controlled_by = GER }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}
+		58 = {
+			 if = {
+        	limit = { is_controlled_by = GER }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}
+		62 = {
+			 if = {
+        	limit = { is_controlled_by = GER }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}	
+			}
+		61 = {
+			 if = {
+        	limit = { is_controlled_by = GER }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+					}
+				}	
+			}
+		}	
+	}
+ focus = {
+		id = GPR_rebuild_berlin_rail
+		icon = GFX_focus_generic_railroad
+		x = 5
+		y = 3
+		cost = 3
+		prerequisite = { focus = GPR_expand_berlin }
+		prerequisite = { focus = GPR_infrastructure }
+		mutually_exclusive = { focus = GPR_new_lines_in_country }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			build_railway = {
+				level = 2
+				path = { 6521 375 11219 9294 9320 }
+			}
+			build_railway = {
+				level = 2
+				path = { 11444 3258 }
+			}			
+			
+			build_railway = {
+				level = 1
+				path = { 6521 9428 478 514 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6521 11505 9496 3473 444 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6521 11444 3312 6282 }
+			}
+			
+			build_railway = {
+				level = 1
+				path = { 3258 293 321 }
+			}
+			build_railway = {
+				level = 1
+				path = { 9320 9347 }
+			}
+	}	
+}
+
+ focus = {
+		id = GPR_improve_rail_construction
+		icon = GFX_goal_generic_soviet_construction
+		x = 4
+		y = 4
+		cost = 5
+		prerequisite = { focus = GPR_rebuild_berlin_rail }
+		prerequisite = { focus = GPR_expand_berlin_construction }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+	64 = {
+		save_event_target_as = GPR_development_target	
+		GPR_rail_development_effect = yes
+		}
+	}
+}
+
+ focus = {
+		id = GPR_new_lines_in_country
+		icon = GFX_focus_generic_railroad
+		x = 7
+		y = 3
+		cost = 10
+		prerequisite = { focus = GPR_rebuild_the_country }
+		prerequisite = { focus = GPR_infrastructure }
+		mutually_exclusive = { focus = GPR_rebuild_berlin_rail }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			build_railway = {
+				level = 2
+				path = { 321 9388 3340 349 6282 6334 9334 9361 11372 }
+			}
+			build_railway = {
+				level = 2
+				path = { 11444 3258 }
+			}
+			build_railway = {
+				level = 2
+				path = { 6282 537 3473 }
+			}
+			build_railway = {
+				level = 2
+				path = { 9320 9294 11219 375 6521 }
+			}
+			build_railway = {
+				level = 2
+				path = { 9347 6257 6389 }
+			}
+			build_railway = {
+				level = 2
+				path = { 3473 11478 }
+			}
+			build_railway = {
+				level = 1
+				path = { 3258 293 321 }
+			}	
+			build_railway = {
+				level = 1
+				path = { 9347 9320 11305 321 }
+			}
+			build_railway = {
+				level = 1
+				path = { 3258 3312 6282 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6521 9428 478 514 }
+			}	
+			build_railway = {
+				level = 1
+				path = { 6521 11505 9496 3473 444 }
+			}
+			build_railway = {
+				level = 1
+				path = { 444 11478 6236 9387 9277 9306 11372 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6521 11444 3312 }
+			}
+			build_railway = {
+				level = 1
+				path = { 6389 11331 11305 }
+			}		
+			
+	}	
+}
+
+#Expanding Berlin
+
+ focus = {
+		id = GPR_expand_berlin
+		icon = GFX_focus_generic_industry_2
+		x = 3
+		y = 1
+		cost = 3
+		prerequisite = { focus = GPR_look_at_economy }
+		mutually_exclusive = { focus = GPR_rebuild_the_country }
+		#allow_branch = { has_country_flag = civilian_economy_focus }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_expand_berlin_tt
+        64 = {
+        set_state_flag = state_expansion
+			 if = {
+        	limit = { is_controlled_by = GER }
+        	    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+					}
+				}	
+
+			}
+		64 = {	
+			save_event_target_as = GPR_development_target
+			GPR_initial_development_effect = yes	
+		}
+	}
+}
+
+
+
+ focus = {
+		id = GPR_further_berlin_expansion
+		icon = GFX_goal_generic_construction
+		x = 3
+		y = 2
+		cost = 3
+		prerequisite = { focus = GPR_expand_berlin }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		add_stability = 0.025
+		64 = {
+			save_event_target_as = GPR_development_target
+			GPR_expand_development_effect = yes
+		}
+	}
+}
+
+ focus = {
+		id = GPR_expand_berlin_construction
+		icon = GFX_goal_generic_construction
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = GPR_further_berlin_expansion }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		add_stability = 0.025
+		64 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        	    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+ focus = {
+		id = GPR_nearing_the_end
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 5
+		cost = 5
+		prerequisite = { focus = GPR_improve_rail_construction }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		add_stability = 0.025
+		64 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        	    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+						}
+					}
+
+				}
+		64 = {		
+			save_event_target_as = GPR_development_target
+			GPR_finishing_development_effect = yes
+		}
+	}
+}
+
+ focus = {
+		id = GPR_berlin_expanded
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 6
+		cost = 5
+		prerequisite = { focus = GPR_nearing_the_end }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		add_stability = 0.05
+		64 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        	    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		64 = {
+		save_event_target_as = GPR_development_target
+		GPR_completed_development_effect = yes
+		}
+	}
+}
+
+#Balanced Rebuilding
+ focus = {
+		id = GPR_rebuild_the_country
+		icon = GFX_focus_generic_industry_3
+		x = 9
+		y = 1
+		cost = 10
+		prerequisite = { focus = GPR_look_at_economy }
+		mutually_exclusive = { focus = GPR_expand_berlin }
+		#allow_branch = { has_country_flag = civilian_economy_focus }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		custom_effect_tooltip = GPR_rebuild_the_country_tt
+        64 = {
+        	set_state_flag = state_expansion
+			 if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}	
+			}
+        58 = {
+        	set_state_flag = state_expansion
+			 if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}	
+			}
+        61 = {
+        	set_state_flag = state_expansion
+			 if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}	
+			}
+		}
+	}
+
+ focus = {
+		id = GPR_invest_in_heavy_industry
+		icon = GFX_goal_generic_construction
+		x = 9
+		y = 2
+		cost = 10
+		prerequisite = { focus = GPR_rebuild_the_country }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		62 = {
+			set_state_flag = state_expansion
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}
+		63 = {
+	        set_state_flag = state_expansion		
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+				}	
+			}
+		68 = {
+        	set_state_flag = state_expansion
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}	
+	}
+}	
+
+ focus = {
+		id = GPR_invest_in_state
+		icon = GFX_focus_mex_privatisation
+		x = 9
+		y = 3
+		cost = 10
+		prerequisite = { focus = GPR_invest_in_heavy_industry }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		unlock_decision_category_tooltip = GPR_invest_in_state
+		custom_effect_tooltip = GPR_invest_in_state_tt
+		}
+	}
+
+ focus = {
+		id = GPR_invest_in_rail
+		icon = GFX_focus_mex_privatisation
+		x = 8
+		y = 4
+		cost = 10
+		prerequisite = { focus = GPR_invest_in_state }
+		prerequisite = { focus = GPR_new_lines_in_country }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			unlock_decision_category_tooltip = GPR_invest_in_rail
+			custom_effect_tooltip = GPR_invest_in_rail_tt
+		}
+	}
+ focus = {
+		id = GPR_expand_oil_capacity
+		icon = GFX_goal_generic_oil_refinery
+		x = 8
+		y = 5
+		cost = 10
+		prerequisite = { focus = GPR_invest_in_rail }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		62 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}
+		63 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}	
+		}
+	}	
+
+ focus = {
+		id = GPR_expand_synthetic_production
+		icon = GFX_focus_generic_rubber
+		x = 8
+		y = 6
+		cost = 10
+		prerequisite = { focus = GPR_expand_oil_capacity }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		61 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}
+		68 = {
+			if = {
+        	limit = { is_controlled_by = GER }
+        		add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+					}
+				}	
+			}	
+		}
+	}			
+
+#Shared foci at end
+
+ focus = {
+		id = GPR_civilian_expansion
+		icon = GFX_focus_generic_industry_1
+		x = 2
+		y = 7
+		cost = 10
+		prerequisite = { focus = GPR_expand_synthetic_production focus = GPR_berlin_expanded }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_expanded_factories
+			every_owned_state = {
+				limit = {
+					is_controlled_by = GER
+				OR = {	
+					has_state_flag = state_expansion
+					has_state_flag = decision_state_expansion
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+ focus = {
+		id = GPR_airfield_expansion
+		icon = GFX_focus_SOV_flying_clubs
+		x = 4
+		y = 7
+		cost = 10
+		prerequisite = { focus = GPR_expand_synthetic_production focus = GPR_berlin_expanded }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_expanded_airbases
+			every_owned_state = {
+				limit = {
+					is_controlled_by = GER
+				OR = {	
+					has_state_flag = state_expansion
+					has_state_flag = decision_state_expansion
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+ focus = {
+		id = GPR_synthetics_expansion
+		icon = GFX_focus_generic_rubber
+		x = 6
+		y = 7
+		cost = 10
+		prerequisite = { focus = GPR_expand_synthetic_production focus = GPR_berlin_expanded }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_expanded_synthetics
+			every_owned_state = {
+				limit = {
+					is_controlled_by = GER
+				OR = {	
+					has_state_flag = state_expansion
+					has_state_flag = decision_state_expansion
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}	
+
+ focus = {
+		id = GPR_naval_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 8
+		y = 7
+		cost = 10
+		prerequisite = { focus = GPR_expand_synthetic_production focus = GPR_berlin_expanded }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_expanded_dockyards
+			every_owned_state = {
+					limit = {
+						is_controlled_by = GER
+					OR = {	
+						has_state_flag = state_expansion
+						is_coastal = yes
+						has_state_flag = decision_state_expansion
+						}
+					}	
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+				}		
+			}
+		}
+	}	
+
+ focus = {
+		id = GPR_military_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 10
+		y = 7
+		cost = 10
+		prerequisite = { focus = GPR_expand_synthetic_production focus = GPR_berlin_expanded }
+		ai_will_do = {
+			factor = 12
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GPR_expanded_factories
+			every_owned_state = {
+				limit = {
+					is_controlled_by = GER
+				OR = {	
+					has_state_flag = state_expansion
+					has_state_flag = decision_state_expansion
+					}
+				}	
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+			}
+		}
+	}	
+}

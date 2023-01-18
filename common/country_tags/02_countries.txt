@@ -1,0 +1,3 @@
+GPR = "countries/German Peoples Republic.txt"
+SAR = "countries/Saarland.txt"
+BAL = "countries/Baltic Union.txt"

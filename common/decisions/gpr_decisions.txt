@@ -1,0 +1,901 @@
+#Invest in states
+
+GPR_invest_in_state = {
+
+	develop_brandenburg = { #64
+
+	icon = generic_factory
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 64
+			}
+		}
+	available = {
+		owns_state = 64
+		controls_state = 64
+		}
+
+	visible = {
+		owns_state = 64
+		controls_state = 64
+		64 = {
+			NOT = { has_state_flag = decision_state_expansion }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			64 = { set_state_flag = decision_state_expansion }
+			64 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_state
+					days = 365
+				}
+			}
+			activate_mission = GPR_invest_in_brandenburg_mission
+		}
+	}	
+	GPR_invest_in_brandenburg_mission = {
+	
+	icon = generic_factory
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = 0.025
+			64 = { 
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	develop_mecklenburg = { #61
+
+	icon = generic_factory
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 61
+			}
+		}
+	available = {
+		owns_state = 61
+		controls_state = 61
+		}
+
+	visible = {
+		owns_state = 61
+		controls_state = 61
+		61 = {
+			NOT = { has_state_flag = decision_state_expansion }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			61 = { set_state_flag = decision_state_expansion }
+			61 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_state
+					days = 365
+				}
+			}
+			activate_mission = GPR_invest_in_mecklenburg_mission
+		}
+	}
+
+	GPR_invest_in_mecklenburg_mission = {
+	
+	icon = generic_factory
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = 0.025
+			61 = { 
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	develop_vorpommern = { #62
+
+	icon = generic_factory
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 62
+			}
+		}
+	available = {
+		owns_state = 62
+		controls_state = 62
+		}
+
+	visible = {
+		owns_state = 62
+		controls_state = 62
+		62 = {
+			NOT = { has_state_flag = decision_state_expansion }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			62 = { set_state_flag = decision_state_expansion }
+			62 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_state
+					days = 365
+				}
+			}
+			activate_mission = GPR_invest_in_vorpommern_mission
+		}
+	}	
+
+	GPR_invest_in_vorpommern_mission = {
+	
+	icon = generic_factory
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = 0.025
+			62 = { 
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	develop_hinterpommern = { #63
+
+	icon = generic_factory
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 63
+			}
+		}
+	available = {
+		owns_state = 63
+		controls_state = 63
+		}
+
+	visible = {
+		owns_state = 63
+		controls_state = 63
+		63 = {
+			NOT = { has_state_flag = decision_state_expansion }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			63 = { set_state_flag = decision_state_expansion }
+			63 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_state
+					days = 365
+				}
+			}
+			activate_mission = GPR_invest_in_hinterpommern_mission
+		}
+	}	
+
+	GPR_invest_in_hinterpommern_mission = {
+	
+	icon = generic_factory
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = 0.025
+			63 = { 
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}	
+
+	develop_ostmark = { #68
+
+	icon = generic_factory
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 68
+			}
+		}
+	available = {
+		owns_state = 68
+		controls_state = 68
+		}
+
+	visible = {
+		owns_state = 68
+		controls_state = 68
+		68 = {
+			NOT = { has_state_flag = decision_state_expansion }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			68 = { set_state_flag = decision_state_expansion }
+			68 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_state
+					days = 365
+				}
+			}
+			activate_mission = GPR_invest_in_ostmark_mission
+		}
+	}	
+
+	GPR_invest_in_ostmark_mission = {
+	
+	icon = generic_factory
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = 0.025
+			68 = { 
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}
+
+	develop_schleswig_holstein = { #58
+
+	icon = generic_factory
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 58
+			}
+		}
+	available = {
+		owns_state = 58
+		controls_state = 58
+		}
+
+	visible = {
+		owns_state = 58
+		controls_state = 58
+		58 = {
+			NOT = { has_state_flag = decision_state_expansion }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			58 = { set_state_flag = decision_state_expansion }
+			58 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_state
+					days = 365
+				}
+			}
+			activate_mission = GPR_invest_in_schleswig_holstein_mission
+		}
+	}		
+
+	GPR_invest_in_schleswig_holstein_mission = {
+	
+	icon = generic_factory
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 365
+
+		timeout_effect = {
+			add_stability = 0.025
+			58 = { 
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+				}
+			}
+		}
+	}	
+}
+
+GPR_invest_in_rail = {
+	
+	develop_brandenburg_rail = { #64
+
+	icon = generic_construction
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 64
+			}
+		}
+	available = {
+		owns_state = 64
+		controls_state = 64
+		}
+
+	visible = {
+		owns_state = 64
+		controls_state = 64
+		64 = {
+			NOT = { has_state_flag = state_rail_developed }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			64 = { set_state_flag = state_rail_developed }
+			64 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_rail
+					days = 180
+				}
+			}
+			activate_mission = GPR_invest_in_brandenburg_rail_mission
+		}
+	}	
+	GPR_invest_in_brandenburg_rail_mission = {
+	
+	icon = generic_construction
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 180
+
+		timeout_effect = {
+			build_railway = {
+				level = 3
+				path = { 9456 3499 6521 }
+			}
+			64 = {
+				add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 9456
+				}		
+			}
+		}
+	}
+
+	develop_mecklenburg_rail = { #61
+
+	icon = generic_construction
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 61
+			}
+		}
+	available = {
+		owns_state = 61
+		controls_state = 61
+		}
+
+	visible = {
+		owns_state = 61
+		controls_state = 61
+		61 = {
+			NOT = { has_state_flag = state_rail_developed }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			61 = { set_state_flag = state_rail_developed }
+			61 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_rail
+					days = 180
+				}
+			}
+			activate_mission = GPR_invest_in_mecklenburg_rail_mission
+		}
+	}
+
+	GPR_invest_in_mecklenburg_rail_mission = {
+	
+	icon = generic_construction
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 180
+
+		timeout_effect = {
+			build_railway = {
+				level = 3
+				path = { 321 11276 11219 }
+			}
+			64 = {
+				add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 11219
+				}
+			}
+		}
+	}
+
+	develop_vorpommern_rail = { #62
+
+	icon = generic_construction
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 62
+			}
+		}
+	available = {
+		owns_state = 62
+		controls_state = 62
+		}
+
+	visible = {
+		owns_state = 62
+		controls_state = 62
+		62 = {
+			NOT = { has_state_flag = state_rail_developed }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			62 = { set_state_flag = state_rail_developed }
+			62 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_rail
+					days = 180
+				}
+			}			activate_mission = GPR_invest_in_vorpommern_rail_mission
+		}
+	}	
+
+	GPR_invest_in_vorpommern_rail_mission = {
+	
+	icon = generic_construction
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 180
+
+		timeout_effect = {
+			build_railway = {
+				level = 3
+				path = { 349 3312 3207 9496 }
+			}
+		}
+	}
+
+	develop_hinterpommern_rail = { #63
+
+	icon = generic_construction
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 63
+			}
+		}
+	available = {
+		owns_state = 63
+		controls_state = 63
+		}
+
+	visible = {
+		owns_state = 63
+		controls_state = 63
+		63 = {
+			NOT = { has_state_flag = state_rail_developed }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			63 = { set_state_flag = state_rail_developed }
+			63 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_rail
+					days = 180
+				}
+			}
+			activate_mission = GPR_invest_in_hinterpommern_rail_mission
+		}
+	}	
+
+	GPR_invest_in_hinterpommern_rail_mission = {
+	
+	icon = generic_construction
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 180
+
+		timeout_effect = {
+			build_railway = {
+				level = 3
+				path = { 6282 6390 6309  9387 }
+			}
+		}	
+	}	
+
+	develop_ostmark_rail = { #68
+
+	icon = generic_construction
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 68
+			}
+		}
+	available = {
+		owns_state = 68
+		controls_state = 68
+		}
+
+	visible = {
+		owns_state = 68
+		controls_state = 68
+		68 = {
+			NOT = { has_state_flag = state_rail_developed }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			68 = { set_state_flag = state_rail_developed }
+			68 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_rail
+					days = 180
+				}
+			}
+			activate_mission = GPR_invest_in_ostmark_rail_mission
+		}
+	}	
+
+	GPR_invest_in_ostmark_rail_mission = {
+	
+	icon = generic_construction
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 180
+
+		timeout_effect = {
+			build_railway = {
+				level = 3
+				path = { 3473 3572 9535 }
+			}		}
+	}
+
+	develop_schleswig_holstein_rail = { #58
+
+	icon = generic_construction
+
+	allowed = {
+	tag = GER
+	}
+	highlight_states = {
+		highlight_state_targets = {
+			state = 58
+			}
+		}
+	available = {
+		owns_state = 58
+		controls_state = 58
+		}
+
+	visible = {
+		owns_state = 58
+		controls_state = 58
+		58 = {
+			NOT = { has_state_flag = state_rail_developed }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 20
+
+		ai_will_do = {
+			base = 0.1
+		}
+		complete_effect = {
+			58 = { set_state_flag = state_rail_developed }
+			58 = {
+				add_dynamic_modifier = { 
+					modifier = invest_in_rail
+					days = 180
+				}
+			}
+			activate_mission = GPR_invest_in_schleswig_holstein_rail_mission
+		}
+	}		
+
+	GPR_invest_in_schleswig_holstein_rail_mission = {
+	
+	icon = generic_construction
+
+	allowed = {
+		tag = GER
+	}
+
+	activation = {
+		always = no
+	}
+
+	available = {
+		always = no
+	}
+
+	days_mission_timeout = 180
+
+		timeout_effect = {
+			build_railway = {
+				level = 3
+				path = { 9347 3368 3231 11366 }
+			}
+			build_railway = {
+				level = 3
+				path = { 6389 317 11366 }
+			}
+			58 = {
+				add_building_construction = {
+						type = supply_node
+						level = 1
+						instant_build = yes
+						province = 11366
+				}		
+			}
+		}
+	}	
+}	

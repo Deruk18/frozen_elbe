@@ -1,0 +1,11 @@
+on_actions = {
+
+#Ernst Thalmann FUCKING DIES
+	on_startup = {
+		effect = {
+			GPR = {
+			news_event = { id = GPR_politics.1 days = 1 random_days = 30 }
+			}
+		}
+	}
+}
