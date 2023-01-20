@@ -1,0 +1,41 @@
+#This is where ideas go...
+
+ideas = {
+
+	country = {
+		GPR_soviet_economy = { #Remove it via focus or... other circumstances
+			allowed = {
+				tag = GPR
+				#is_puppet = yes #Currently not active... for now
+			}
+
+			cancel = {
+				#is_puppet = no #Currently not active... for now
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				stability_factor = -0.05
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		GPR_purging_the_right = {
+			allowed = {
+				tag = GPR
+			}
+
+			cancel = {
+				NOT = {
+				has_government = communism
+				}
+			}
+
+			modifier = {
+				fascism_drift = -0.02
+			}
+		}
+
+	}	
+}
