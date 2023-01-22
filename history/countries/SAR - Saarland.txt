@@ -1,4 +1,4 @@
-capital = 762 #Saarbrucken
+capital = 916 #Saarbrucken
 
 oob = "SAR_1930"
 
