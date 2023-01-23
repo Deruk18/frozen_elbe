@@ -2,6 +2,14 @@ capital = 784 #Vilnius
 
 oob = "BAL_1930"
 
+add_ideas = {
+	BAL_low_government_control
+	BAL_Germans_Want_Freedom_1
+	BAL_Lithuanians_Want_Freedom_2
+	BAL_Latvians_Want_Freedom_2
+	BAL_Estonians_Want_Freedom_3
+}
+
 #Starting tech
 set_technology = {
 	
