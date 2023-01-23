@@ -2,19 +2,28 @@ capital = 64 #Berlin
 
 oob = "GPR_1930"
 
+add_ideas = { #Starting ideas
+	GPR_soviet_economy
+	GPR_purging_the_right
+
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+}
+ 
 #Starting tech
 set_technology = {
 	
 }
 
-set_politics = {
+set_politics = { #Starting party
 	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
-set_popularities = {
+set_popularities = { #Starting popularities. Will change less than a month in...
 	democratic = 12
 	fascism = 3
 	communism = 81

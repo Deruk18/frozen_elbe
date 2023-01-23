@@ -1,0 +1,24 @@
+capital = 10 #Warsaw
+
+oob = "POL_1930"
+
+add_ideas = {
+	
+
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 16
+	fascism = 28
+	communism = 54
+	neutrality =  2
+}

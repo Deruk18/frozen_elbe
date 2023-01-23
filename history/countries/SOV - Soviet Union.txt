@@ -1,0 +1,38 @@
+capital = 219 #Moscow
+
+add_ideas = {
+	
+}
+
+set_autonomy = {
+		target = BAL
+		autonomous_state = autonomy_puppet
+	}
+set_autonomy = {
+		target = POL
+		autonomous_state = autonomy_puppet
+	}
+set_autonomy = {
+		target = GPR
+		autonomous_state = autonomy_puppet
+	}		
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	fascism = 2
+	communism = 88
+}
+
+create_faction = Comintern
+add_to_faction = SOV
+add_to_faction = MON
+add_to_faction = TAN
+add_to_faction = POL
+add_to_faction = BAL
+add_to_faction = GPR
