@@ -1,0 +1,61 @@
+#Prepare for hell
+
+BAL_estonian_independence = {
+	priority = 410
+
+	scripted_gui = BAL_estonian_fervor_ui
+
+	allowed = {
+		original_tag = BAL
+	}
+
+	visible = {
+			has_country_flag = estonian_fervor
+	}
+	visible_when_empty = yes
+}
+
+BAL_latvian_independence = {
+	priority = 409
+
+	scripted_gui = BAL_latvian_fervor_ui
+
+	allowed = {
+		original_tag = BAL
+	}
+
+	visible = {
+			has_country_flag = latvian_fervor
+	}
+	visible_when_empty = yes
+}
+
+BAL_lithuanian_independence = {
+	priority = 408
+
+	scripted_gui = BAL_lithuanian_fervor_ui
+
+	allowed = {
+		original_tag = BAL
+	}
+
+	visible = {
+			has_country_flag = lithuanian_fervor
+	}
+	visible_when_empty = yes
+}
+
+BAL_german_independence = {
+	priority = 407
+
+	scripted_gui = BAL_german_fervor_ui
+
+	allowed = {
+		original_tag = BAL
+	}
+
+	visible = {
+			has_country_flag = german_fervor
+	}
+	visible_when_empty = yes
+}

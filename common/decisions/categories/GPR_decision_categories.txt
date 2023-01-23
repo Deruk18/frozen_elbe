@@ -6,7 +6,7 @@ GPR_invest_in_state = {
 	icon = ger_mefo_bills
 
 	allowed = {
-		original_tag = GER
+		original_tag = GPR
 	}
 
 	visible = {
@@ -20,7 +20,7 @@ GPR_invest_in_rail = {
 	icon = ger_mefo_bills
 
 	allowed = {
-		original_tag = GER
+		original_tag = GPR
 	}
 
 	visible = {
