@@ -6,11 +6,11 @@ ideas = {
 		GPR_soviet_economy = { #Remove it via focus or... other circumstances
 			allowed = {
 				tag = GPR
-				#is_puppet = yes #Currently not active... for now
+				is_puppet = yes #Now active!
 			}
 
 			cancel = {
-				#is_puppet = no #Currently not active... for now
+				is_puppet = no #Now active!
 			}
 
 			modifier = {
@@ -36,6 +36,5 @@ ideas = {
 				fascism_drift = -0.02
 			}
 		}
-
 	}	
 }
