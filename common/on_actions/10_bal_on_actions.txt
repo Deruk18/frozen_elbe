@@ -1,0 +1,11 @@
+on_actions = {
+
+#Fervor...
+	on_startup = {
+		effect = {
+			BAL = {	
+				set_country_flag = german_fervor  set_country_flag = lithuanian_fervor  set_country_flag = latvian_fervor  set_country_flag = estonian_fervor
+			}
+		}
+	}
+}
