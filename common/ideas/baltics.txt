@@ -1,0 +1,295 @@
+#This is where ethnic crisises begins
+
+ideas = {
+	country = {
+
+		BAL_low_government_control = {
+			allowed = {
+				tag = BAL
+			}
+
+			modifier = {
+				stability_factor = -0.15
+				non_core_manpower = -0.55
+			}
+		}
+
+#tier 1 independence
+
+		BAL_Germans_Want_Freedom_1 = { #They will kill for it by by the way
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 763
+				}
+				OR = {
+					owns_state = 188
+				}
+			}
+
+			modifier = {
+				
+			}
+		}
+
+		BAL_Lithuanians_Want_Freedom_1 = { #They will kill for it by the way
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 784
+				}
+				OR = {
+					owns_state = 814
+				}
+				OR = {
+					owns_state = 815
+				}
+				OR = {
+					owns_state = 11
+				}
+				OR = {
+					owns_state = 189
+				}
+				OR = {
+					owns_state = 188
+				}
+			}
+
+			modifier = {
+				
+			}
+		}
+
+	BAL_Latvians_Want_Freedom_1 = { #They will kill for it by
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 190
+				}
+				OR = {
+					owns_state = 809
+				}
+				OR = {
+					owns_state = 808
+				}
+				OR = {
+					owns_state = 12
+				}
+				OR = {
+					owns_state = 810
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+	BAL_Estonians_Want_Freedom_1 = { #They will kill for it by
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 811
+				}
+				OR = {
+					owns_state = 13 
+				}
+				OR = {
+					owns_state = 812
+				}
+				OR = {
+					owns_state = 813
+				}
+				OR = {
+					owns_state = 191
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+#tier 2 independence
+
+	BAL_Germans_Want_Freedom_2 = { #They will kill for it by by the way
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 763
+				}
+				OR = {
+					owns_state = 188
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+		BAL_Lithuanians_Want_Freedom_2 = { #They will kill for it by the way
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 784
+				}
+				OR = {
+					owns_state = 814
+				}
+				OR = {
+					owns_state = 815
+				}
+				OR = {
+					owns_state = 11
+				}
+				OR = {
+					owns_state = 189
+				}
+				OR = {
+					owns_state = 188
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+	BAL_Latvians_Want_Freedom_2 = { #They will kill for it by
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 190
+				}
+				OR = {
+					owns_state = 809
+				}
+				OR = {
+					owns_state = 808
+				}
+				OR = {
+					owns_state = 12
+				}
+				OR = {
+					owns_state = 810
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+	BAL_Estonians_Want_Freedom_2 = { #They will kill for it by
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 811
+				}
+				OR = {
+					owns_state = 13 
+				}
+				OR = {
+					owns_state = 812
+				}
+				OR = {
+					owns_state = 813
+				}
+				OR = {
+					owns_state = 191
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+#tier 3 independence
+
+	BAL_Germans_Want_Freedom_3 = { #They will kill for it by by the way
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 763
+				}
+				OR = {
+					owns_state = 188
+				}
+			}
+			modifier = {
+
+			}
+		}
+
+		BAL_Lithuanians_Want_Freedom_3 = { #They will kill for it by the way
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 784
+				}
+				OR = {
+					owns_state = 814
+				}
+				OR = {
+					owns_state = 815
+				}
+				OR = {
+					owns_state = 11
+				}
+				OR = {
+					owns_state = 189
+				}
+				OR = {
+					owns_state = 188
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+	BAL_Latvians_Want_Freedom_3 = { #They will kill for it by
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 190
+				}
+				OR = {
+					owns_state = 809
+				}
+				OR = {
+					owns_state = 808
+				}
+				OR = {
+					owns_state = 12
+				}
+				OR = {
+					owns_state = 810
+				}
+			}
+			modifier = {
+				
+			}
+		}
+
+	BAL_Estonians_Want_Freedom_3 = { #They will kill for it by
+			allowed = {
+				tag = BAL
+				OR = {
+					owns_state = 811
+				}
+				OR = {
+					owns_state = 13 
+				}
+				OR = {
+					owns_state = 812
+				}
+				OR = {
+					owns_state = 813
+				}
+				OR = {
+					owns_state = 191
+				}
+			}
+			modifier = {
+				
+			}
+		}			
+	}
+}
